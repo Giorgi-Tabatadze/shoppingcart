@@ -1,0 +1,30 @@
+.home h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+.horizontal-cfa {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.horizontal-text {
+  width: 500px;
+}
+.circles-cfa {
+  display: flex;
+  justify-content: space-around;
+}
+.circle-cfa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.circle-cfa img {
+  width: 200px;
+  clip-path: circle();
+}
+.circle-text {
+  width: 200px;
+  text-align: center;
+}
