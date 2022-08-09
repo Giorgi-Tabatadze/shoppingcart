@@ -3,7 +3,7 @@ function HorizontalCfa(props) {
   const { img, alt, heading, text, imgFirst, buttonText, onButtonClick } =
     props;
   const cfa = imgFirst ? (
-    <div className="horizontal-cfa">
+    <div className="horizontal-cfa img-first">
       <img src={img} alt={alt} />
       <div className="horizontal-text">
         <h2>{heading}</h2>
@@ -14,7 +14,7 @@ function HorizontalCfa(props) {
       </div>
     </div>
   ) : (
-    <div className="horizontal-cfa">
+    <div className="horizontal-cfa img-second">
       <div className="horizontal-text">
         <h2>{heading}</h2>
         <p>{text}</p>

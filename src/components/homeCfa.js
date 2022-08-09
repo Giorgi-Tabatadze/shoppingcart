@@ -6,7 +6,7 @@ function HomeCfa(props) {
     <div className="home-cfa">
       <div className="home-text">
         <h1>{heading}</h1>
-        <h2>{text}</h2>
+        <p>{text}</p>
         <button type="button" onClick={onButtonClick}>
           {buttonText}
         </button>

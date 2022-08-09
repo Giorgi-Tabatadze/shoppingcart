@@ -15,27 +15,29 @@ function HomePage() {
       <HomeCfa
         heading="Buy your Books Here"
         text="We are the biggest online book store in the area"
-        buttonText="Shop"
-        onButtonClick=""
-      />
-      <HorizontalCfa
-        img={womanReading}
-        alt="Woman Reading a Book"
-        heading="The world was hers for the reading"
-        text="20% off for womans day"
-        imgFirst
         buttonText="Shop Now"
         onButtonClick=""
       />
-      <HorizontalCfa
-        img={silmarilion}
-        alt="Silmarilion, Book"
-        heading="Prepare for Amazon's series Rings of Power"
-        text="Series are going to be set in the second age for which you can prepare by reading the silmarilion and learning what is going to happen"
-        imgFirst={false}
-        buttonText="Shop Now"
-        onButtonClick=""
-      />
+      <div className="horizontal-cfas">
+        <HorizontalCfa
+          img={womanReading}
+          alt="Woman Reading a Book"
+          heading="20% off for womans day"
+          text="The world was hers for the reading"
+          imgFirst
+          buttonText="Shop Now"
+          onButtonClick=""
+        />
+        <HorizontalCfa
+          img={silmarilion}
+          alt="Silmarilion, Book"
+          heading="Prepare for Amazon's series Rings of Power"
+          text="Series are going to be set in the second age for which you can prepare by reading the silmarilion and learning what is going to happen"
+          imgFirst={false}
+          buttonText="Shop Now"
+          onButtonClick=""
+        />
+      </div>
       <div className="circles-cfa">
         <CircleCfa
           img={buyonline}

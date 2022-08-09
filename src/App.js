@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react/react-in-jsx-scope */
+import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import HomePage from "./home/home";
+import ShopPage from "./shop/shop";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Link to="/">
+        <button type="button">Home</button>
+      </Link>
+      <Link to="/shop">
+        <button type="button"> Shop </button>
+      </Link>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
