@@ -1,13 +1,13 @@
 import React from "react";
 import "./home.css";
-import womanReading from "../content/home/img/womanreading.jpg";
-import silmarilion from "../content/home/img/silmarilion.jpg";
-import buyonline from "../content/home/img/buyonline.jpg";
-import delivery from "../content/home/img/delivery.jpg";
-import cashback from "../content/home/img/cashback.jpg";
-import HomeCfa from "../components/homeCfa";
-import HorizontalCfa from "../components/horizontalCfa";
-import CircleCfa from "../components/circleCfa";
+import womanReading from "./img/womanreading.jpg";
+import silmarilion from "./img/silmarilion.jpg";
+import buyonline from "./img/buyonline.jpg";
+import delivery from "./img/delivery.jpg";
+import cashback from "./img/cashback.jpg";
+import HomeCfa from "./components/homeCfa";
+import HorizontalCfa from "./components/horizontalCfa";
+import CircleCfa from "./components/circleCfa";
 
 function HomePage() {
   return (

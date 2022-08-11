@@ -1,5 +1,5 @@
 .home {
-  background-image: url("../content/home/img/background.webp");
+  background-image: url("./img/background.webp");
   background-attachment: fixed;
 }
 .home h1,
