@@ -43,6 +43,11 @@ function ProductDetails(props) {
     }
   };
 
+  const handleChange = (event) => {
+    const newAmount = Number(event.target.value);
+    setAmount(newAmount);
+  };
+
   const sendToCart = () => {
     addToCart(id, amount);
   };
@@ -93,7 +98,12 @@ function ProductDetails(props) {
             <button className="crement" type="button" onClick={decrement}>
               -
             </button>
-            <input id="details-amount" type="tel" value={amount} />
+            <input
+              id="details-amount"
+              type="tel"
+              value={amount}
+              onChange={handleChange}
+            />
             <button type="button" className="crement" onClick={increment}>
               +
             </button>

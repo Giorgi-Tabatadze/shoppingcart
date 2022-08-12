@@ -19,7 +19,6 @@ function App() {
     const productAlreadyAdded = newCart.findIndex((product) => {
       return product.id === productToAdd.id;
     });
-    console.log(productAlreadyAdded);
     if (productAlreadyAdded === -1) {
       setCart([...newCart, productToAdd]);
     } else {
