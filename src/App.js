@@ -16,17 +16,16 @@ function App() {
     productToAdd.id = Number(id);
     productToAdd.amount = Number(amount);
     const newCart = [...cart];
-    const productAlreadyAdded = cart.find((product) => {
+    const productAlreadyAdded = newCart.findIndex((product) => {
       return product.id === productToAdd.id;
     });
     console.log(productAlreadyAdded);
-    if (productAlreadyAdded != null) {
-      newCart.productAlreadyAdded.amount += productToAdd.amount;
+    if (productAlreadyAdded === -1) {
+      setCart([...newCart, productToAdd]);
     } else {
-      newCart.push(productToAdd);
+      newCart[productAlreadyAdded].amount += productToAdd.amount;
+      setCart([...newCart]);
     }
-
-    setCart([newCart]);
   };
   const deleteFromCart = (id) => {
     setCart(
