@@ -53,12 +53,7 @@ function Header(props) {
       onMouseOut={hideDropdown}
       onBlur={hideDropdown}
       className={`dropdown-list ${dropDownVisible ? "visible" : ""}`}
-    >
-      <DropdownCart booksInCart={booksInCart} orderTotal={orderTotal} />
-      <Link to="/cart">
-        <button type="button"> Checkout </button>
-      </Link>
-    </div>
+    />
   );
 
   return (

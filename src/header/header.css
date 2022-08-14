@@ -45,19 +45,6 @@ nav button {
 .dropdown-list {
   position: absolute;
   opacity: 0;
-  position: absolute;
-  right: 20px;
-  z-index: 100;
-  width: 300px;
-  display: flex;
-  margin-right: 70px;
-  margin-top: 20px;
-  flex-direction: column;
-  align-items: center;
-  padding: 30px 10px;
-  border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.37);
-  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.37);
 }
 .dropdown-list.visible {
   position: absolute;
@@ -65,7 +52,6 @@ nav button {
   opacity: 1;
   right: 20px;
   top: 30px;
-
   z-index: 100;
   width: 300px;
   display: flex;

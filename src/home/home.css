@@ -139,3 +139,7 @@ button {
   white-space: nowrap;
   width: auto;
 }
+button:hover {
+  background-color: #cb0e4e;
+  border-color: #cb0e4e;
+}

@@ -12,7 +12,6 @@
 }
 .product-card:hover {
   cursor: pointer;
-  transform: scale(1.05);
 }
 
 .product-card img {
