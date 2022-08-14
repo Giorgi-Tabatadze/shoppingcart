@@ -1,5 +1,6 @@
 import React from "react";
 import "./home.css";
+import { useNavigate } from "react-router-dom";
 import womanReading from "./img/womanreading.jpg";
 import silmarilion from "./img/silmarilion.jpg";
 import buyonline from "./img/buyonline.jpg";
@@ -10,13 +11,17 @@ import HorizontalCfa from "./components/horizontalCfa";
 import CircleCfa from "./components/circleCfa";
 
 function HomePage() {
+  const navigate = useNavigate();
+  const navigateToShop = () => {
+    navigate(`/shop`);
+  };
   return (
     <div className="home">
       <HomeCfa
         heading="Buy your Books Here"
         text="We are the biggest online book store in the area"
         buttonText="Shop Now"
-        onButtonClick=""
+        onButtonClick={navigateToShop}
       />
       <div className="horizontal-cfas">
         <HorizontalCfa
@@ -26,7 +31,7 @@ function HomePage() {
           text="The world was hers for the reading"
           imgFirst
           buttonText="Shop Now"
-          onButtonClick=""
+          onButtonClick={navigateToShop}
         />
         <HorizontalCfa
           img={silmarilion}
@@ -35,7 +40,7 @@ function HomePage() {
           text="Series are going to be set in the second age for which you can prepare by reading the silmarilion and learning what is going to happen"
           imgFirst={false}
           buttonText="Shop Now"
-          onButtonClick=""
+          onButtonClick={navigateToShop}
         />
       </div>
       <div className="circles-cfa">

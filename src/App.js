@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /* eslint-disable react/react-in-jsx-scope */
 import "./App.css";
 import "normalize.css";
@@ -7,6 +8,8 @@ import HomePage from "./home/home";
 import ShopPage from "./shop/shop";
 import booksToSell from "./shop/booksToSell/books";
 import ProductDetails from "./shop/components/productDetails";
+import CartPage from "./cart/cart";
+import Header from "./header/header";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -33,6 +36,38 @@ function App() {
       }),
     );
   };
+  const incrementDecrementCart = (id, changeAmountBy) => {
+    const newCart = [...cart];
+    id = Number(id);
+    changeAmountBy = Number(changeAmountBy);
+
+    const productId = newCart.findIndex((product) => {
+      return product.id === id;
+    });
+    newCart[productId].amount += changeAmountBy;
+    if (newCart[productId].amount <= 0) {
+      deleteFromCart(id);
+    } else {
+      setCart([...newCart]);
+    }
+  };
+  const changeCart = (id, newAmount) => {
+    const newCart = [...cart];
+    id = Number(id);
+    newAmount = Number(newAmount);
+
+    const productId = newCart.findIndex((product) => {
+      return product.id === id;
+    });
+    newCart[productId].amount = newAmount;
+    if (newCart[productId].amount < 0) {
+      console.log("amount should not change");
+    } else if (newCart[productId].amount === 0) {
+      deleteFromCart(id);
+    } else {
+      setCart([...newCart]);
+    }
+  };
 
   useEffect(() => {
     console.log(cart);
@@ -40,16 +75,24 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Link to="/">
-        <button type="button">Home</button>
-      </Link>
-      <Link to="/shop">
-        <button type="button"> Shop </button>
-      </Link>
+      <Header books={booksToSell} cart={cart} />
 
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/shop" element={<ShopPage books={booksToSell} />} />
+        <Route
+          path="/cart"
+          element={
+            <CartPage
+              books={booksToSell}
+              cart={cart}
+              incrementDecrementCart={incrementDecrementCart}
+              changeCart={changeCart}
+              deleteFromCart={deleteFromCart}
+            />
+          }
+        />
+
         <Route
           path="/shop/view/:productid"
           element={

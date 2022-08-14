@@ -1,7 +1,10 @@
 /* eslint-disable react/react-in-jsx-scope */
+import { useNavigate } from "react-router-dom";
+
 function HorizontalCfa(props) {
   const { img, alt, heading, text, imgFirst, buttonText, onButtonClick } =
     props;
+
   const cfa = imgFirst ? (
     <div className="horizontal-cfa img-first">
       <img src={img} alt={alt} />
