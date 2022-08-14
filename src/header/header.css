@@ -2,10 +2,10 @@
   position: sticky;
   z-index: 3;
   top: 0;
-  width: 998w;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  padding: 10px 0px;
 }
 nav button {
   width: 250px;
