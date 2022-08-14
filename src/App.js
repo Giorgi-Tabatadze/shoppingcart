@@ -79,7 +79,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/shop" element={<ShopPage books={booksToSell} />} />
+        <Route
+          path="/shop"
+          element={<ShopPage books={booksToSell} addToCart={addToCart} />}
+        />
         <Route
           path="/cart"
           element={
