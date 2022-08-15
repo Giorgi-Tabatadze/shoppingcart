@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/shoppingcart/static/css/main.a9ad9d87.css",
+    "main.js": "/shoppingcart/static/js/main.e08520d8.js",
+    "static/media/silmarilion.jpg": "/shoppingcart/static/media/silmarilion.db3418def10ea6a04399.jpg",
+    "static/media/hobbits.jpg": "/shoppingcart/static/media/hobbits.fe36552acec688682cf7.jpg",
+    "static/media/dune.jpg": "/shoppingcart/static/media/dune.6814b33eb0421f52504e.jpg",
+    "static/media/womanreading.jpg": "/shoppingcart/static/media/womanreading.125833fdeed3dcfeeb74.jpg",
+    "static/media/norwegianWood.jpg": "/shoppingcart/static/media/norwegianWood.8bbac591dd9ce11d4ae3.jpg",
+    "static/media/q84.jpg": "/shoppingcart/static/media/q84.6900f5ddf07f9f3f1aa0.jpg",
+    "static/media/brazil.jpg": "/shoppingcart/static/media/brazil.327f97ffb8a8ca3aef38.jpg",
+    "static/media/alice.jpg": "/shoppingcart/static/media/alice.facf869b74a5ddfc4983.jpg",
+    "static/media/mentalhealth.jpg": "/shoppingcart/static/media/mentalhealth.ea2b6c68534a75191475.jpg",
+    "static/media/jonathanlivingston.jpg": "/shoppingcart/static/media/jonathanlivingston.cf2c609585640e0d3f89.jpg",
+    "static/media/handmaids.jpg": "/shoppingcart/static/media/handmaids.37a3ce7525c048cd4ef0.jpg",
+    "static/media/delivery.jpg": "/shoppingcart/static/media/delivery.ab0de1df6cffe86e30cb.jpg",
+    "static/media/cashback.jpg": "/shoppingcart/static/media/cashback.bb0fc1e70ead52230ce8.jpg",
+    "static/media/buyonline.jpg": "/shoppingcart/static/media/buyonline.884bb01ca933a7ae9793.jpg",
+    "static/media/shoppingbag.svg": "/shoppingcart/static/media/shoppingbag.034ac6a84a517ef452dbcd1737d6f04e.svg",
+    "index.html": "/shoppingcart/index.html",
+    "static/media/trash.svg": "/shoppingcart/static/media/trash.50ddb433560e759939d0cafc12de40a7.svg",
+    "main.a9ad9d87.css.map": "/shoppingcart/static/css/main.a9ad9d87.css.map",
+    "main.e08520d8.js.map": "/shoppingcart/static/js/main.e08520d8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9ad9d87.css",
+    "static/js/main.e08520d8.js"
+  ]
+}
