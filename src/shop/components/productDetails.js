@@ -94,7 +94,11 @@ function ProductDetails(props) {
           </div>
           <div className="detailed-order">
             <p className="detailed-price">{`${price} USD`}</p>
-            <label htmlFor="details-amount">Amount: </label>
+            <label className="details-amount" htmlFor="details-amount">
+              Quantity{" "}
+            </label>
+          </div>
+          <div className="cart-quantity">
             <button className="crement" type="button" onClick={decrement}>
               -
             </button>
@@ -107,14 +111,14 @@ function ProductDetails(props) {
             <button type="button" className="crement" onClick={increment}>
               +
             </button>
-            <button type="button" onClick={sendToCart}>
-              Add to Cart
-            </button>
           </div>
+          <button type="button" onClick={sendToCart}>
+            Add to Cart
+          </button>
         </div>
       </div>
       <div className="synopsis">
-        <h3>Synopsis: </h3>
+        <h3>Synopsis </h3>
         <p>{synopsis}</p>
       </div>
     </div>

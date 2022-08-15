@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from "react";
 import "./cart.css";
+import trashIcon from "./trash.svg";
 
 function CartPage(props) {
   const { books, cart, incrementDecrementCart, deleteFromCart } = props;
@@ -15,9 +16,11 @@ function CartPage(props) {
       }
     });
   });
-  const orderTotal = booksInCart.reduce((accumulator, book) => {
-    return accumulator + book.price * book.amount;
-  }, 0);
+  const orderTotal = booksInCart
+    .reduce((accumulator, book) => {
+      return accumulator + (book.price * 100 * book.amount) / 100;
+    }, 0)
+    .toFixed(2);
 
   const increment = (event) => {
     const id = Number(event.target.dataset.id);
@@ -71,7 +74,7 @@ function CartPage(props) {
                     <p className="cart-author">{book.author}</p>
                   </div>
                 </div>
-                <div className="cart-price">{book.price}</div>
+                <div className="cart-price">{book.price} USD</div>
                 <div className="cart-quantity">
                   <button
                     data-id={book.id}
@@ -96,15 +99,15 @@ function CartPage(props) {
                   >
                     +
                   </button>
-                  <button
-                    data-id={book.id}
-                    type="button"
-                    className="cart-remove"
-                    onClick={remove}
-                  >
-                    Remove
-                  </button>
                 </div>
+                <button
+                  data-id={book.id}
+                  type="button"
+                  className="cart-remove"
+                  onClick={remove}
+                >
+                  <img src={trashIcon} alt="remove item" />
+                </button>
               </div>
             );
           })}

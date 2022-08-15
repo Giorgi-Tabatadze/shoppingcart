@@ -15,9 +15,10 @@ table {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
 }
 .cart {
-  border: 1px solid gray;
+  border: 1px solid #707070;
   padding: 20px 50px;
 }
 
@@ -32,25 +33,26 @@ table {
 .cart-unit {
   display: grid;
   grid-template-columns: 200px 200px 200px 200px 200px;
+  align-items: center;
 }
 .cart-header-product {
-  grid-column: 1/4;
+  grid-column: 1/3;
 }
 .cart-header-price {
-  grid-column: 4/5;
+  grid-column: 3/4;
 }
 .cart-header-quantity {
-  grid-column: 5/6;
+  grid-column: 4/5;
 }
 
 .cart-product {
-  grid-column: 1/4;
+  grid-column: 1/3;
 }
 .cart-price {
-  grid-column: 4/5;
+  grid-column: 3/4;
 }
 .cart-quantity {
-  grid-column: 5/6;
+  grid-column: 4/5;
 }
 
 .cart-quantity input {
@@ -59,4 +61,13 @@ table {
 .crement {
   padding: 5px;
   width: 30px;
+  margin: 0px;
+}
+
+.cart-remove img {
+  width: 20px;
+}
+.cart-remove {
+  width: 70px;
+  padding: 5px 10px;
 }

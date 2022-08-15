@@ -23,9 +23,11 @@ function Header(props) {
       }
     });
   });
-  const orderTotal = booksInCart.reduce((accumulator, book) => {
-    return accumulator + book.price * book.amount;
-  }, 0);
+  const orderTotal = booksInCart
+    .reduce((accumulator, book) => {
+      return accumulator + (book.price * 100 * book.amount) / 100;
+    }, 0)
+    .toFixed(2);
 
   const showDropdown = () => {
     setDropdownVisible(true);
@@ -57,7 +59,7 @@ function Header(props) {
   );
 
   return (
-    <div className="links">
+    <div className="links" onMouseOut={hideDropdown} onBlur={hideDropdown}>
       <nav>
         <Link to="/">
           <button type="button">Home</button>
@@ -82,7 +84,13 @@ function Header(props) {
             <span>{cart.length}</span>
           </div>
         </div>
-        {dropdown}
+        <div
+          onMouseOver={showDropdown}
+          onFocus={showDropdown}
+          className={`dropdown-overlay ${dropDownVisible ? "visible" : ""}`}
+        >
+          {dropdown}
+        </div>
       </div>
     </div>
   );
